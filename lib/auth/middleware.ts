@@ -67,7 +67,7 @@ export function withTeam<T>(action: ActionWithTeamFunction<T>) {
 
     const team = await getTeamForUser();
     if (!team) {
-      redirect('/onboarding/team?redirect=pricing')
+      redirect('/pricing')
     }
 
     return action(formData, team);
